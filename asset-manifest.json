@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Musomatic/static/css/main.8c57f3ba.chunk.css",
-    "main.js": "/Musomatic/static/js/main.55cb501c.chunk.js",
-    "main.js.map": "/Musomatic/static/js/main.55cb501c.chunk.js.map",
+    "main.css": "/Musomatic/static/css/main.d2429174.chunk.css",
+    "main.js": "/Musomatic/static/js/main.7d037cc6.chunk.js",
+    "main.js.map": "/Musomatic/static/js/main.7d037cc6.chunk.js.map",
     "runtime-main.js": "/Musomatic/static/js/runtime-main.492e8e93.js",
     "runtime-main.js.map": "/Musomatic/static/js/runtime-main.492e8e93.js.map",
     "static/css/2.835e987b.chunk.css": "/Musomatic/static/css/2.835e987b.chunk.css",
-    "static/js/2.c2d62ece.chunk.js": "/Musomatic/static/js/2.c2d62ece.chunk.js",
-    "static/js/2.c2d62ece.chunk.js.map": "/Musomatic/static/js/2.c2d62ece.chunk.js.map",
+    "static/js/2.59ca14c3.chunk.js": "/Musomatic/static/js/2.59ca14c3.chunk.js",
+    "static/js/2.59ca14c3.chunk.js.map": "/Musomatic/static/js/2.59ca14c3.chunk.js.map",
     "index.html": "/Musomatic/index.html",
     "static/css/2.835e987b.chunk.css.map": "/Musomatic/static/css/2.835e987b.chunk.css.map",
-    "static/css/main.8c57f3ba.chunk.css.map": "/Musomatic/static/css/main.8c57f3ba.chunk.css.map",
-    "static/js/2.c2d62ece.chunk.js.LICENSE.txt": "/Musomatic/static/js/2.c2d62ece.chunk.js.LICENSE.txt",
+    "static/css/main.d2429174.chunk.css.map": "/Musomatic/static/css/main.d2429174.chunk.css.map",
+    "static/js/2.59ca14c3.chunk.js.LICENSE.txt": "/Musomatic/static/js/2.59ca14c3.chunk.js.LICENSE.txt",
     "static/media/MVX-design.d40edf94.svg": "/Musomatic/static/media/MVX-design.d40edf94.svg",
     "static/media/create_content.1848c778.svg": "/Musomatic/static/media/create_content.1848c778.svg",
     "static/media/cta.css": "/Musomatic/static/media/section_1.908acfce.svg",
@@ -20,6 +20,7 @@
     "static/media/eom_chart_mobile.d77ec553.svg": "/Musomatic/static/media/eom_chart_mobile.d77ec553.svg",
     "static/media/library.css": "/Musomatic/static/media/hero.bd007aec.svg",
     "static/media/howItWorks.css": "/Musomatic/static/media/how_it_worksBG.b2c0ff67.svg",
+    "static/media/logo_nav_foot.0027108e.svg": "/Musomatic/static/media/logo_nav_foot.0027108e.svg",
     "static/media/music.a68024dc.svg": "/Musomatic/static/media/music.a68024dc.svg",
     "static/media/music_icon.b3d780cd.svg": "/Musomatic/static/media/music_icon.b3d780cd.svg",
     "static/media/music_record.07be7d9d.png": "/Musomatic/static/media/music_record.07be7d9d.png",
@@ -31,8 +32,8 @@
   "entrypoints": [
     "static/js/runtime-main.492e8e93.js",
     "static/css/2.835e987b.chunk.css",
-    "static/js/2.c2d62ece.chunk.js",
-    "static/css/main.8c57f3ba.chunk.css",
-    "static/js/main.55cb501c.chunk.js"
+    "static/js/2.59ca14c3.chunk.js",
+    "static/css/main.d2429174.chunk.css",
+    "static/js/main.7d037cc6.chunk.js"
   ]
 }
