@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Musomatic/static/css/main.db72fbdb.chunk.css",
-    "main.js": "/Musomatic/static/js/main.d2cdf3c6.chunk.js",
-    "main.js.map": "/Musomatic/static/js/main.d2cdf3c6.chunk.js.map",
+    "main.css": "/Musomatic/static/css/main.8be98c2b.chunk.css",
+    "main.js": "/Musomatic/static/js/main.931dfa56.chunk.js",
+    "main.js.map": "/Musomatic/static/js/main.931dfa56.chunk.js.map",
     "runtime-main.js": "/Musomatic/static/js/runtime-main.babefd12.js",
     "runtime-main.js.map": "/Musomatic/static/js/runtime-main.babefd12.js.map",
     "static/css/2.835e987b.chunk.css": "/Musomatic/static/css/2.835e987b.chunk.css",
-    "static/js/2.e23db621.chunk.js": "/Musomatic/static/js/2.e23db621.chunk.js",
-    "static/js/2.e23db621.chunk.js.map": "/Musomatic/static/js/2.e23db621.chunk.js.map",
+    "static/js/2.857d9c90.chunk.js": "/Musomatic/static/js/2.857d9c90.chunk.js",
+    "static/js/2.857d9c90.chunk.js.map": "/Musomatic/static/js/2.857d9c90.chunk.js.map",
     "static/js/3.5e7ccb3e.chunk.js": "/Musomatic/static/js/3.5e7ccb3e.chunk.js",
     "static/js/3.5e7ccb3e.chunk.js.map": "/Musomatic/static/js/3.5e7ccb3e.chunk.js.map",
     "static/js/4.1f5c87fd.chunk.js": "/Musomatic/static/js/4.1f5c87fd.chunk.js",
@@ -18,12 +18,13 @@
     "static/js/6.70086b75.chunk.js.map": "/Musomatic/static/js/6.70086b75.chunk.js.map",
     "index.html": "/Musomatic/index.html",
     "static/css/2.835e987b.chunk.css.map": "/Musomatic/static/css/2.835e987b.chunk.css.map",
-    "static/css/main.db72fbdb.chunk.css.map": "/Musomatic/static/css/main.db72fbdb.chunk.css.map",
-    "static/js/2.e23db621.chunk.js.LICENSE.txt": "/Musomatic/static/js/2.e23db621.chunk.js.LICENSE.txt",
+    "static/css/main.8be98c2b.chunk.css.map": "/Musomatic/static/css/main.8be98c2b.chunk.css.map",
+    "static/js/2.857d9c90.chunk.js.LICENSE.txt": "/Musomatic/static/js/2.857d9c90.chunk.js.LICENSE.txt",
     "static/media/stream.css": "/Musomatic/static/media/NotoColorEmoji-flags.148141ac.woff2",
     "static/media/MVX-design.d40edf94.svg": "/Musomatic/static/media/MVX-design.d40edf94.svg",
     "static/media/create_content.1848c778.svg": "/Musomatic/static/media/create_content.1848c778.svg",
     "static/media/cta.css": "/Musomatic/static/media/section_1.908acfce.svg",
+    "static/media/dashboard.8eb65ba4.svg": "/Musomatic/static/media/dashboard.8eb65ba4.svg",
     "static/media/eom.css": "/Musomatic/static/media/eomBG.f2c3c3ca.svg",
     "static/media/eom_chart.7fea3b3f.svg": "/Musomatic/static/media/eom_chart.7fea3b3f.svg",
     "static/media/eom_chart_mobile.d77ec553.svg": "/Musomatic/static/media/eom_chart_mobile.d77ec553.svg",
@@ -50,8 +51,8 @@
   "entrypoints": [
     "static/js/runtime-main.babefd12.js",
     "static/css/2.835e987b.chunk.css",
-    "static/js/2.e23db621.chunk.js",
-    "static/css/main.db72fbdb.chunk.css",
-    "static/js/main.d2cdf3c6.chunk.js"
+    "static/js/2.857d9c90.chunk.js",
+    "static/css/main.8be98c2b.chunk.css",
+    "static/js/main.931dfa56.chunk.js"
   ]
 }
