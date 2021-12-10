@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Musomatic/static/css/main.334e24bd.chunk.css",
-    "main.js": "/Musomatic/static/js/main.a290422a.chunk.js",
-    "main.js.map": "/Musomatic/static/js/main.a290422a.chunk.js.map",
+    "main.js": "/Musomatic/static/js/main.5483bf2e.chunk.js",
+    "main.js.map": "/Musomatic/static/js/main.5483bf2e.chunk.js.map",
     "runtime-main.js": "/Musomatic/static/js/runtime-main.08982498.js",
     "runtime-main.js.map": "/Musomatic/static/js/runtime-main.08982498.js.map",
     "static/css/2.835e987b.chunk.css": "/Musomatic/static/css/2.835e987b.chunk.css",
@@ -61,6 +61,6 @@
     "static/css/2.835e987b.chunk.css",
     "static/js/2.e5439e6e.chunk.js",
     "static/css/main.334e24bd.chunk.css",
-    "static/js/main.a290422a.chunk.js"
+    "static/js/main.5483bf2e.chunk.js"
   ]
 }
