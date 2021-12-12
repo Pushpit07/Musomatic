@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Musomatic/static/css/main.a1eb133e.chunk.css",
-    "main.js": "/Musomatic/static/js/main.1b44f09d.chunk.js",
-    "main.js.map": "/Musomatic/static/js/main.1b44f09d.chunk.js.map",
+    "main.css": "/Musomatic/static/css/main.e0f8d5f2.chunk.css",
+    "main.js": "/Musomatic/static/js/main.a4778a8a.chunk.js",
+    "main.js.map": "/Musomatic/static/js/main.a4778a8a.chunk.js.map",
     "runtime-main.js": "/Musomatic/static/js/runtime-main.77c807d4.js",
     "runtime-main.js.map": "/Musomatic/static/js/runtime-main.77c807d4.js.map",
     "static/css/2.de151cb5.chunk.css": "/Musomatic/static/css/2.de151cb5.chunk.css",
-    "static/js/2.ce13b06c.chunk.js": "/Musomatic/static/js/2.ce13b06c.chunk.js",
-    "static/js/2.ce13b06c.chunk.js.map": "/Musomatic/static/js/2.ce13b06c.chunk.js.map",
+    "static/js/2.7935a104.chunk.js": "/Musomatic/static/js/2.7935a104.chunk.js",
+    "static/js/2.7935a104.chunk.js.map": "/Musomatic/static/js/2.7935a104.chunk.js.map",
     "static/js/3.0d4a098a.chunk.js": "/Musomatic/static/js/3.0d4a098a.chunk.js",
     "static/js/3.0d4a098a.chunk.js.map": "/Musomatic/static/js/3.0d4a098a.chunk.js.map",
     "static/js/4.8535bb36.chunk.js": "/Musomatic/static/js/4.8535bb36.chunk.js",
@@ -18,8 +18,8 @@
     "static/js/6.4add0d1c.chunk.js.map": "/Musomatic/static/js/6.4add0d1c.chunk.js.map",
     "index.html": "/Musomatic/index.html",
     "static/css/2.de151cb5.chunk.css.map": "/Musomatic/static/css/2.de151cb5.chunk.css.map",
-    "static/css/main.a1eb133e.chunk.css.map": "/Musomatic/static/css/main.a1eb133e.chunk.css.map",
-    "static/js/2.ce13b06c.chunk.js.LICENSE.txt": "/Musomatic/static/js/2.ce13b06c.chunk.js.LICENSE.txt",
+    "static/css/main.e0f8d5f2.chunk.css.map": "/Musomatic/static/css/main.e0f8d5f2.chunk.css.map",
+    "static/js/2.7935a104.chunk.js.LICENSE.txt": "/Musomatic/static/js/2.7935a104.chunk.js.LICENSE.txt",
     "static/media/stream.css": "/Musomatic/static/media/NotoColorEmoji-flags.148141ac.woff2",
     "static/media/Group333.b571f885.svg": "/Musomatic/static/media/Group333.b571f885.svg",
     "static/media/Group334.03a31838.svg": "/Musomatic/static/media/Group334.03a31838.svg",
@@ -61,8 +61,8 @@
   "entrypoints": [
     "static/js/runtime-main.77c807d4.js",
     "static/css/2.de151cb5.chunk.css",
-    "static/js/2.ce13b06c.chunk.js",
-    "static/css/main.a1eb133e.chunk.css",
-    "static/js/main.1b44f09d.chunk.js"
+    "static/js/2.7935a104.chunk.js",
+    "static/css/main.e0f8d5f2.chunk.css",
+    "static/js/main.a4778a8a.chunk.js"
   ]
 }
