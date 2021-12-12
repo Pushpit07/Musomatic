@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Musomatic/static/css/main.e0f8d5f2.chunk.css",
+    "main.css": "/Musomatic/static/css/main.5cb46167.chunk.css",
     "main.js": "/Musomatic/static/js/main.3087983a.chunk.js",
     "main.js.map": "/Musomatic/static/js/main.3087983a.chunk.js.map",
     "runtime-main.js": "/Musomatic/static/js/runtime-main.77c807d4.js",
@@ -18,7 +18,7 @@
     "static/js/6.4add0d1c.chunk.js.map": "/Musomatic/static/js/6.4add0d1c.chunk.js.map",
     "index.html": "/Musomatic/index.html",
     "static/css/2.de151cb5.chunk.css.map": "/Musomatic/static/css/2.de151cb5.chunk.css.map",
-    "static/css/main.e0f8d5f2.chunk.css.map": "/Musomatic/static/css/main.e0f8d5f2.chunk.css.map",
+    "static/css/main.5cb46167.chunk.css.map": "/Musomatic/static/css/main.5cb46167.chunk.css.map",
     "static/js/2.7935a104.chunk.js.LICENSE.txt": "/Musomatic/static/js/2.7935a104.chunk.js.LICENSE.txt",
     "static/media/stream.css": "/Musomatic/static/media/NotoColorEmoji-flags.148141ac.woff2",
     "static/media/Group333.b571f885.svg": "/Musomatic/static/media/Group333.b571f885.svg",
@@ -62,7 +62,7 @@
     "static/js/runtime-main.77c807d4.js",
     "static/css/2.de151cb5.chunk.css",
     "static/js/2.7935a104.chunk.js",
-    "static/css/main.e0f8d5f2.chunk.css",
+    "static/css/main.5cb46167.chunk.css",
     "static/js/main.3087983a.chunk.js"
   ]
 }
