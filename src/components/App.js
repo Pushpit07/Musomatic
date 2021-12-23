@@ -1,6 +1,6 @@
 // Importing packages
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Web3 from "web3";
 import { StreamChat } from "stream-chat";
 import axios from "axios";
@@ -46,9 +46,7 @@ function App() {
     const [songLyrics, setSongLyrics] = useState("");
     const [lyricsBuffer, setLyricsBuffer] = useState(Buffer(enc.encode("-")));
     const [songDescription, setSongDescription] = useState("");
-    const [descriptionBuffer, setDescriptionBuffer] = useState(
-        Buffer(enc.encode("-"))
-    );
+    const [descriptionBuffer, setDescriptionBuffer] = useState(Buffer(enc.encode("-")));
     const [maticUSD, setMaticUSD] = useState("");
     const [maticINR, setMaticINR] = useState("");
     // Modal States
@@ -110,12 +108,8 @@ function App() {
                                         symbol: "MATIC",
                                         decimals: 18,
                                     },
-                                    rpcUrls: [
-                                        "https://matic-mumbai.chainstacklabs.com/",
-                                    ],
-                                    blockExplorerUrls: [
-                                        "https://mumbai.polygonscan.com/",
-                                    ],
+                                    rpcUrls: ["https://matic-mumbai.chainstacklabs.com/"],
+                                    blockExplorerUrls: ["https://mumbai.polygonscan.com/"],
                                     iconUrls: [""],
                                 },
                             ],
@@ -130,19 +124,12 @@ function App() {
         if (ethereum) {
             window.web3 = new Web3(ethereum);
             await addPolygonTestnetNetwork();
-        } else if (
-            ethereum &&
-            (await ethereum.request({ method: "net_version" })) !== "80001"
-        ) {
+        } else if (ethereum && (await ethereum.request({ method: "net_version" })) !== "80001") {
             window.web3 = new Web3(window.web3.currentProvider);
             await addPolygonTestnetNetwork();
         } else {
             // const web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
-            window.web3 = new Web3(
-                new Web3.providers.HttpProvider(
-                    "https://polygon-mumbai.infura.io/v3/6f89b4b5242a4191af04c7939d66d6e8"
-                )
-            );
+            window.web3 = new Web3(new Web3.providers.HttpProvider("https://polygon-mumbai.infura.io/v3/6f89b4b5242a4191af04c7939d66d6e8"));
             window.alert(
                 "Non-Ethereum browser detected. You cannot perform any transactions on the blockchain, however you will still be able to watch all content present on the blockchain. To make transactions you should consider installing Metamask"
             );
@@ -160,10 +147,7 @@ function App() {
 
         const networkData = Musomatic.networks[ENV.BLOCKCHAIN_NETWORK_ID];
         if (networkData) {
-            const _musomatic = new web3.current.eth.Contract(
-                Musomatic.abi,
-                networkData.address
-            );
+            const _musomatic = new web3.current.eth.Contract(Musomatic.abi, networkData.address);
             setMusomatic(_musomatic);
 
             // Fetch all NFTs
@@ -177,9 +161,7 @@ function App() {
 
             setLoading(false);
         } else {
-            window.alert(
-                "Musomatic contract not deployed to detected network."
-            );
+            window.alert("Musomatic contract not deployed to detected network.");
         }
     }, [ethereum]);
 
@@ -193,23 +175,20 @@ function App() {
         setStreamAuthToken(token);
     };
 
-    const streamAuthCheck = useCallback(
-        async (streamAuthToken, setStreamAuthToken, account) => {
-            if (streamAuthToken && account) {
-                streamClient.connectUser(
-                    {
-                        id: account.substring(2),
-                        account: account,
-                    },
-                    streamAuthToken
-                );
-            }
-            if (!streamAuthToken && account) {
-                await StreamAuth(account, setStreamAuthToken);
-            }
-        },
-        []
-    );
+    const streamAuthCheck = useCallback(async (streamAuthToken, setStreamAuthToken, account) => {
+        if (streamAuthToken && account) {
+            streamClient.connectUser(
+                {
+                    id: account.substring(2),
+                    account: account,
+                },
+                streamAuthToken
+            );
+        }
+        if (!streamAuthToken && account) {
+            await StreamAuth(account, setStreamAuthToken);
+        }
+    }, []);
 
     useEffect(() => {
         async function tasks() {
@@ -225,10 +204,7 @@ function App() {
     async function captureLyrics(event) {
         event.preventDefault();
 
-        const file = new Blob(
-            [event.target.value.length > 0 ? event.target.value : "-"],
-            { type: "text/plain" }
-        );
+        const file = new Blob([event.target.value.length > 0 ? event.target.value : "-"], { type: "text/plain" });
 
         if (file) {
             const reader = new window.FileReader();
@@ -245,10 +221,7 @@ function App() {
     async function captureDescription(event) {
         event.preventDefault();
 
-        const file = new Blob(
-            [event.target.value.length > 0 ? event.target.value : "-"],
-            { type: "text/plain" }
-        );
+        const file = new Blob([event.target.value.length > 0 ? event.target.value : "-"], { type: "text/plain" });
 
         if (file) {
             const reader = new window.FileReader();
@@ -284,9 +257,7 @@ function App() {
         if (document.getElementById("upload-song")) {
             var uploadSong = document.getElementById("upload-song");
             if (uploadSong.files[0].size > 100700000) {
-                alert(
-                    "File size is too big! Please upload a file smaller than 100MB."
-                );
+                alert("File size is too big! Please upload a file smaller than 100MB.");
                 return;
             }
         }
@@ -305,14 +276,7 @@ function App() {
         }
     }
 
-    async function createSong(
-        _name,
-        _artistName,
-        _price,
-        _onSale,
-        _links,
-        _characteristics
-    ) {
+    async function createSong(_name, _artistName, _price, _onSale, _links, _characteristics) {
         var _imgHash;
         var _songHash;
         var _lyricsHash;
@@ -337,103 +301,78 @@ function App() {
                 _songHash = _songResult[0].hash;
                 console.log("_songHash:", _songHash);
 
-                ipfs.add(
-                    descriptionBuffer,
-                    async (error, _descriptionResult) => {
-                        console.log("_descriptionResult:", _descriptionResult);
+                ipfs.add(descriptionBuffer, async (error, _descriptionResult) => {
+                    console.log("_descriptionResult:", _descriptionResult);
+                    if (error) {
+                        console.error(error);
+                        return;
+                    }
+                    _descriptionHash = descriptionBuffer.equals(Buffer(enc.encode("-"))) ? [] : _descriptionResult[0].hash;
+                    console.log("_descriptionHash:", _descriptionHash);
+
+                    ipfs.add(lyricsBuffer, async (error, _lyricsResult) => {
+                        console.log("_lyricsResult:", _lyricsResult);
                         if (error) {
                             console.error(error);
                             return;
                         }
-                        _descriptionHash = descriptionBuffer.equals(
-                            Buffer(enc.encode("-"))
-                        )
-                            ? []
-                            : _descriptionResult[0].hash;
-                        console.log("_descriptionHash:", _descriptionHash);
+                        _lyricsHash = lyricsBuffer.equals(Buffer(enc.encode("-"))) ? [] : _lyricsResult[0].hash;
+                        console.log("_lyricsHash:", _lyricsHash);
 
-                        ipfs.add(lyricsBuffer, async (error, _lyricsResult) => {
-                            console.log("_lyricsResult:", _lyricsResult);
-                            if (error) {
-                                console.error(error);
-                                return;
-                            }
-                            _lyricsHash = lyricsBuffer.equals(
-                                Buffer(enc.encode("-"))
-                            )
-                                ? []
-                                : _lyricsResult[0].hash;
-                            console.log("_lyricsHash:", _lyricsHash);
+                        // Set up your Ethereum transaction
+                        const transactionParameters = {
+                            to: contractAddress, // Required except during contract publications.
+                            from: account, // must match user's active address.
+                            data: musomatic.methods
+                                .createSong(
+                                    _name,
+                                    _artistName,
+                                    window.web3.utils.toWei(_price, "Ether"),
+                                    _imgHash,
+                                    _songHash,
+                                    _descriptionHash,
+                                    _lyricsHash,
+                                    _onSale,
+                                    _links,
+                                    _characteristics
+                                )
+                                .encodeABI(), //make call to NFT smart contract
+                        };
 
-                            // Set up your Ethereum transaction
-                            const transactionParameters = {
-                                to: contractAddress, // Required except during contract publications.
-                                from: account, // must match user's active address.
-                                data: musomatic.methods
-                                    .createSong(
-                                        _name,
-                                        _artistName,
-                                        window.web3.utils.toWei(
-                                            _price,
-                                            "Ether"
-                                        ),
-                                        _imgHash,
-                                        _songHash,
-                                        _descriptionHash,
-                                        _lyricsHash,
-                                        _onSale,
-                                        _links,
-                                        _characteristics
-                                    )
-                                    .encodeABI(), //make call to NFT smart contract
+                        // Sign the transaction via Metamask
+                        try {
+                            const txHash = await window.ethereum.request({
+                                method: "eth_sendTransaction",
+                                params: [transactionParameters],
+                            });
+                            setLoading(false);
+                            setShowCreateSuccess(true);
+                            return {
+                                success: true,
+                                status: "Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" + txHash,
                             };
-
-                            // Sign the transaction via Metamask
-                            try {
-                                const txHash = await window.ethereum.request({
-                                    method: "eth_sendTransaction",
-                                    params: [transactionParameters],
-                                });
-                                setLoading(false);
-                                setShowCreateSuccess(true);
-                                return {
-                                    success: true,
-                                    status:
-                                        "Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
-                                        txHash,
-                                };
-                            } catch (error) {
-                                setLoading(false);
-                                setShowError(true);
-                                return {
-                                    success: false,
-                                    status:
-                                        "Something went wrong: " +
-                                        error.message,
-                                };
-                            }
-                        });
-                    }
-                );
+                        } catch (error) {
+                            setLoading(false);
+                            setShowError(true);
+                            return {
+                                success: false,
+                                status: "Something went wrong: " + error.message,
+                            };
+                        }
+                    });
+                });
             });
         });
     }
 
     const createTeamChannel = async (_artistAddress, _artistName) => {
-        var selectedMembers = [
-            streamClient.userID,
-            _artistAddress.substring(2),
-        ];
+        var selectedMembers = [streamClient.userID, _artistAddress.substring(2)];
 
         try {
-            const newChannel = await streamClient.channel(
-                "team",
-                _artistAddress,
-                {
-                    name: _artistName + "'s Room",
-                    members: selectedMembers,
-                }
-            );
+            const newChannel = await streamClient.channel("team", _artistAddress, {
+                name: _artistName + "'s Room",
+                members: selectedMembers,
+            });
 
             await newChannel.watch();
 
@@ -447,20 +386,14 @@ function App() {
 
     const createMessagingChannel = async (_artistAddress, _artistName) => {
         var selectedUsers = [streamClient.userID, _artistAddress.substring(2)];
-        var _channelId = streamClient.userID
-            .substring(0, 20)
-            .concat(_artistAddress.substring(2, 22));
+        var _channelId = streamClient.userID.substring(0, 20).concat(_artistAddress.substring(2, 22));
 
         try {
-            const newChannel = await streamClient.channel(
-                "messaging",
-                _channelId,
-                {
-                    name: _artistName,
-                    members: selectedUsers,
-                    account: _artistAddress,
-                }
-            );
+            const newChannel = await streamClient.channel("messaging", _channelId, {
+                name: _artistName,
+                members: selectedUsers,
+                account: _artistAddress,
+            });
 
             await newChannel.watch();
 
@@ -546,7 +479,7 @@ function App() {
     }
 
     return (
-        <BrowserRouter>
+        <Router>
             <ScrollToTop />
             <Navbar />
             <Switch>
@@ -590,30 +523,12 @@ function App() {
                         )
                     }
                 />
-                <Route
-                    exact
-                    path="/library"
-                    render={() =>
-                        loading ? <Loading /> : <Library songNFTs={songNFTs} />
-                    }
-                />
-                <Route
-                    exact
-                    path="/trending"
-                    render={() =>
-                        loading ? <Loading /> : <Trending songNFTs={songNFTs} />
-                    }
-                />
+                <Route exact path="/library" render={() => (loading ? <Loading /> : <Library songNFTs={songNFTs} />)} />
+                <Route exact path="/trending" render={() => (loading ? <Loading /> : <Trending songNFTs={songNFTs} />)} />
                 <Route
                     exact
                     path="/dashboard"
-                    render={() =>
-                        loading ? (
-                            <Loading />
-                        ) : (
-                            <Dashboard account={account} songNFTs={songNFTs} />
-                        )
-                    }
+                    render={() => (loading ? <Loading /> : <Dashboard account={account} songNFTs={songNFTs} />)}
                 />
                 <Route
                     exact
@@ -636,9 +551,7 @@ function App() {
                                 maticUSD={maticUSD}
                                 maticINR={maticINR}
                                 showCreateSuccess={showCreateSuccess}
-                                closeCreateSuccessModal={
-                                    closeCreateSuccessModal
-                                }
+                                closeCreateSuccessModal={closeCreateSuccessModal}
                                 showError={showError}
                             />
                         )
@@ -651,7 +564,7 @@ function App() {
                 <Redirect to="/404" />
             </Switch>
             <Footer />
-        </BrowserRouter>
+        </Router>
     );
 }
 
