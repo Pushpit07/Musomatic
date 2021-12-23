@@ -1,0 +1,25 @@
+# This is a workflow to deploy to Firebase
+
+name: CI/CD
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout 🛎️
+              uses: actions/checkout@v1
+
+            - name: Install and Build
+              run: |
+                  npm install
+                  CI=false npm run build
+            - name: Firebase Deploy 🚀
+              run: |
+                  sudo npm install -g firebase-tools
+                  firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
