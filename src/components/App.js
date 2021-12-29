@@ -525,11 +525,7 @@ function App() {
                 />
                 <Route exact path="/library" render={() => (loading ? <Loading /> : <Library songNFTs={songNFTs} />)} />
                 <Route exact path="/trending" render={() => (loading ? <Loading /> : <Trending songNFTs={songNFTs} />)} />
-                <Route
-                    exact
-                    path="/dashboard"
-                    render={() => (loading ? <Loading /> : <Dashboard account={account} songNFTs={songNFTs} />)}
-                />
+                <Route exact path="/dashboard" render={() => (loading ? <Loading /> : <Dashboard account={account} songNFTs={songNFTs} />)} />
                 <Route
                     exact
                     path="/create"
